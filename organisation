@@ -1,54 +1,72 @@
-digraph SQA_qualification_description_summary{
+digraph public_organisation{
 ratio = "auto"
 rankdir = LR;
 # core information about the qualification
-"sqa:48604" -> "National 3 Physics" [label="dc:title"];
-"sqa:48604" -> "National 3 Physics  develop an understanding"  [label="dc:description"];
-"sqa:48604" -> "http://www.sqa.org.uk"   [label="dc:publisher"];
-"sqa:48604" -> "3" [label="sqa:scqfLevel"];
-"sqa:48604" -> "sqaQualType:NQ" [label="sqa:qualificationType"];
-"sqa:48604" -> "sqaQualLevel:N3" [label="sqa:qualificationLevel"];
-"sqa:48604" -> "sqaSubject:48604" [label="sqa:subject"];
-"sqa:48604" -> "sqaQualCode:C75773" [label="sqa:qualificationCode"];
-"sqa:48604" -> "sqa:RA" [label="sqa:superclass"];
-
-"sqa:RA" -> "sqa:R" [label="sqa:superclass"];
-
-# labels for superclasses
-"sqa:RA" -> "Science" [label="rdfs:label"];
-"sqa:R" -> "Science and Mathematics" [label="rdfs:label"];
-
-# create a sector identifier entity specific for this qualification
-"sqa:48604" -> "sectors:48604" [label="sqa:hasSectors"];
-
-# information about the sectors that the qualification is grouped within
-"sectors:48604" -> "sqaSector:1" [label="sqa:hasSector"];
-"sectors:48604" -> "sqaSector:2" [label="sqa:hasSector"];
-"sectors:48604" -> "sqaSector:3" [label="sqa:hasSector"];
-
-# labels for the sectors
-"sqaSector:1" -> "Power Generation and Renewables" [label="rdfs:label"];
-"sqaSector:2" -> "Science and Maths,Science, Technology" [label="rdfs:label"];
-"sqaSector:3" -> "Engineering and Mathematics" [label="rdfs:label"];
-
-# labels for SQA Qualification Type entities
-"sqaQualType:NQ" -> "National Qualification" [label="skos:prefLabel"];
-"sqaQualType:NQ" -> "NQ" [label="skos:notation"];
+"Public Organisation" -> "Social Security Scotland" [label="dc:title"];
+"Public Organisation" -> "Social Security Scotland is an Executive Agency of the Scottish Government.
+It’s responsible for..."  [label="summaryDescription"];
+"Public Organisation" -> "Building a better benefits system for Scotland
+Over the next 4 years..."  [label="detailedDescription"];
+"Public Organisation" -> "http://www.mygov.scot"   [label="dc:publisher"];
+"Public Organisation" -> "benefits-and-grants" [label="topic"];
+"Public Organisation" -> "people-of-scotland" [label="users"];
+"Public Organisation" -> "Primary contact" [label="contact"];
+"Public Organisation" -> "Connect" [label="connect"];
+"Public Organisation" -> "Our organisation" [label="organisation"];
+"Public Organisation" -> "Our services" [label="services"];
 
 
-# labels for SQA Qualification Level entities
-"sqaQualLevel:N3" -> "National 3" [label="skos:prefLabel"];
-"sqaQualLevel:N3" -> "N3" [label="skos:notation"];
+#primary contact details
+"Primary contact" -> "Phone 1" [label="phone"];
+"Primary contact" -> "Address 1" [label="address"];
 
-# labels for SQA Qualification Subject entities
-"sqaSubject:48604" -> "Physics" [label="skos:prefLabel"];
+# labels for phone
+"Phone 1" -> "0800 182 2222" [label="phoneNumber"];
+"Phone 1" -> "Monday to Friday: 8.00am to 6pm" [label="phoneHours"];
+"Phone 1" -> "Social Security Scotland’s freephone helpline will close..." [label="phoneDescription"];
 
-# label for SQA Qualification Code entities
-"sqaQualCode:C75773" -> "C757 73" [label="skos:prefLabel"];
+# labels for address
+"Address 1" -> "Social Security Scotland
+General Enquiries
+PO Box 10301
+Dundee
+DD1 9FW" [label="address"];
+"Address 1" -> "null hours" [label="addressHours"];
+"Address 1" -> "null desc." [label="addressDescription"];
+
+#Connect details
+"Connect" -> "@SocSecScot" [label="twitter"];
+"Connect" -> "https://www.socialsecurity.gov.scot/" [label="website"];
+"Connect" -> "https://www.facebook.com/SocSecScot/" [label="facebook"];
+
+
+#Organisation details
+"Our organisation" -> "Chief executive" [label="chiefExecutive"]
+
+#Chief executive details
+"Chief executive" -> "David Wallace" [label="name"]
+"Chief executive" -> "image" [label="image"]
+"Chief executive" -> "The chief executive is..." [label="ceDescription"]
+
+#Services list
+"Our services" -> "Best Start Grant and Best Start Foods" [label="service"]
+"Our services" -> "Carer's Allowance Supplement" [label="service"]
+"Our services" -> "Benefit Fraud" [label="service"]
+
+#Service description for BSG and BSF
+"Best Start Grant and Best Start Foods" -> "https://www.mygov.scot/best-start-grant-best-start-foods/" [label="serviceLink"]
+"Best Start Grant and Best Start Foods" -> "A benefit designed to provide a cash payment..." [label="serviceDescription"]
+
+#Service description for Carer's Allowance Supplement
+"Carer's Allowance Supplement" -> "https://www.mygov.scot/carers-allowance-supplement/" [label="serviceLink"]
+"Carer's Allowance Supplement" -> "An extra payment for carers in Scotland..." [label="serviceDescription"]
+
+#Service description for Benefit Fraud
+"Benefit Fraud" -> "https://www.mygov.scot/benefit-fraud/" [label="serviceLink"]
+"Benefit Fraud" -> "Includes reporting benefit fraud..." [label="serviceDescription"]
 
 
 ### add colour and style to strings
-"Power Generation and Renewables" [color=red shape=box];
-"National 3" [color=red shape=box];
+"people-of-scotland" [color=red shape=box];
 
 }
