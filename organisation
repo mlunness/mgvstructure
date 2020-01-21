@@ -73,6 +73,11 @@ DD1 9FW" [label="address"];
 
 
 ### add colour and style to strings
-"people-of-scotland" [color=red shape=box];
+"How we work" [color=red shape=box];
+"Others on Senior leadership team" [color=red shape=box];
+"Other Non-executive board members" [color=red shape=box];
+"null hours" [color=red shape=box];
+"null desc." [color=red shape=box];
+
 
 }
