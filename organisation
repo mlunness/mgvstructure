@@ -3,6 +3,7 @@ ratio = "auto"
 rankdir = LR;
 # core information about the qualification
 "Public Organisation" -> "Social Security Scotland" [label="dc:title"];
+"Public Organisation" -> "Scottish Government & Executive Agencies" [label="orgType"];
 "Public Organisation" -> "Social Security Scotland is an Executive Agency of the Scottish Government.
 It’s responsible for..."  [label="summaryDescription"];
 "Public Organisation" -> "Building a better benefits system for Scotland
