@@ -14,6 +14,7 @@ Over the next 4 years..."  [label="detailedDescription"];
 "Public Organisation" -> "Connect" [label="connect"];
 "Public Organisation" -> "Our organisation" [label="organisation"];
 "Public Organisation" -> "Our services" [label="services"];
+"Public Organisation" -> "How we work" [label="operations"];
 
 
 #primary contact details
@@ -41,7 +42,10 @@ DD1 9FW" [label="address"];
 
 
 #Organisation details
-"Our organisation" -> "Chief executive" [label="chiefExecutive"]
+"Our organisation" -> "Chief executive" [label="person"]
+"Our organisation" -> "Others on Senior leadership team" [label="person"]
+"Our organisation" -> "Other Non-executive board members" [label="person"]
+
 
 #Chief executive details
 "Chief executive" -> "David Wallace" [label="name"]
@@ -64,6 +68,7 @@ DD1 9FW" [label="address"];
 #Service description for Benefit Fraud
 "Benefit Fraud" -> "https://www.mygov.scot/benefit-fraud/" [label="serviceLink"]
 "Benefit Fraud" -> "Includes reporting benefit fraud..." [label="serviceDescription"]
+
 
 
 ### add colour and style to strings
